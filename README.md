@@ -3,6 +3,10 @@
 # [ SW-PAYSLIP ]
 Sw-payslip is a simple payslip system for your server.
 
+## Join my Discord Server
+[![Discord](https://img.shields.io/discord/1034349935249858662?style=for-the-badge&label=Discord%20Server)](https://discord.gg/ckYfQWDKe7)
+
+
 # [ FEATURES ]
 
 - After every X minutes you collect a payslip that saves in the database
