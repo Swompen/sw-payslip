@@ -26,7 +26,7 @@ QBCore & Oxmysql
 1. Go trough the config and change things to your liking.
 2. Make a target function or something and trigger below trigger. (If you dont know how, come to my discord and ask me)
 ```
-sw-payslip:targetCollect
+TriggerClientEvent('sw-payslip:targetCollect')
 ```
 3. Go to qb-core --> server --> functions.lua and comment out or remove the code below.
 
