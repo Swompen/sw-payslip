@@ -1,10 +1,9 @@
+![chrome_nYeMRDeW9E](https://user-images.githubusercontent.com/16113909/199747215-3bb56b40-20b6-4b85-a5e3-6836750c738b.png)
 
 # [ SW-PAYSLIP ]
 Sw-payslip is a simple payslip system for your server.
 
 # [ FEATURES ]
-
-
 
 - After every X minutes you collect a payslip that saves in the database
 
@@ -17,9 +16,12 @@ Sw-payslip is a simple payslip system for your server.
 - Easy config with translations
 
 # [ INSTALLATION ]
-It's plug and play script wise, all you have to do is go trough the config and configure it to your liking and disable the default QBCore paycheck system.
-
-Go to qb-core --> server --> functions.lua and comment out or remove the code below.
+1. Go trough the config and change things to your liking.
+2. Make a target function or something and trigger below trigger. (If you dont know how, come to my discord and ask me)
+```
+sw-payslip:targetCollect
+```
+3. Go to qb-core --> server --> functions.lua and comment out or remove the code below.
 
 ```
 -- Paychecks (standalone - don't touch)
