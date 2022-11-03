@@ -15,6 +15,9 @@ Sw-payslip is a simple payslip system for your server.
 
 - Easy config with translations
 
+# [ DEPENDENCIES ]
+QBCore & Oxmysql
+
 # [ INSTALLATION ]
 1. Go trough the config and change things to your liking.
 2. Make a target function or something and trigger below trigger. (If you dont know how, come to my discord and ask me)
