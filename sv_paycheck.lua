@@ -45,12 +45,12 @@ RegisterServerEvent('sw-payslip:Collect', function()
                     Player.Functions.AddMoney(Config.PayType, paycheck)
                     exports.oxmysql:execute('UPDATE paychecks SET collectamount = ? WHERE citizenid = ? AND job = ?',
                         { 0, cid, v.job })
-                    TriggerClientEvent('QBCore:Notify', src, Config.Translations.collected_payslip)
+                    TriggerClientEvent('QBCore:Notify', src, Config.Translations.collected_payslip  " " ..paycheck)
                     if Config.SocietyType == 'management' then
                         exports['qb-management']:RemoveMoney(v.job, paycheck)
                     else
                         exports['Renewed-Banking']:removeAccountMoney(v.job, paycheck)
-                        exports['Renewed-Banking']:handleTransaction(v.job, 'Utbetalad lön', paycheck,
+                        exports['Renewed-Banking']:handleTransaction(v.job, Config.Translations.Renewed_transactionTitle, paycheck,
                             Player.PlayerData.charinfo.firstname ..
                             ' ' ..
                             Player.PlayerData.charinfo.lastname .. '' .. Config.Translations.Renewed_transactionMessage,
@@ -62,7 +62,7 @@ RegisterServerEvent('sw-payslip:Collect', function()
             Player.Functions.AddMoney(Config.PayType, paycheck)
             exports.oxmysql:execute('UPDATE paychecks SET collectamount = ? WHERE citizenid = ? AND job = ?',
                 { 0, cid, v.job })
-            TriggerClientEvent('QBCore:Notify', src, Config.Translations.collected_payslip)
+            TriggerClientEvent('QBCore:Notify', src, Config.Translations.collected_payslip " " ..paycheck)
         end
     end
 end)
