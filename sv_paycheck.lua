@@ -29,7 +29,6 @@ RegisterServerEvent('sw-payslip:Collect', function()
     local cid = Player.PlayerData.citizenid
     local result = MySQL.query.await('SELECT * FROM paychecks WHERE citizenid = ?', { cid })
     for _, v in pairs(result) do
-        local account = exports['Renewed-Banking']:getAccountMoney(v.job)
         paycheck = v.collectamount
         if Config.SocietyPays then
             if Config.SocietyType == 'management' then
